@@ -31,7 +31,7 @@ jobs:
     - name: temp listing
       run: ls
     - name: list Output
-      run: ls out/
+      run: ls out/make/
     - uses: actions/upload-artifact@v2
       with:
         name: ${{ github.job }}
