@@ -28,7 +28,10 @@ jobs:
       - name: Create artifacts folder
         run: mkdir artifacts
       - name: Copy output to artifacts
-        run: cp out/lwmusic-darwin-x64 artifacts/
+        run: cp out/lwmusic-darwin-x64/lwmusic.app artifacts/
+        run: cp out/lwmusic-darwin-x64/LICENSE artifacts/
+        run: cp out/lwmusic-darwin-x64/LICENSES.chromium.html artifacts/
+        run: cp out/lwmusic-darwin-x64/version artifacts/
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ github.job }}
