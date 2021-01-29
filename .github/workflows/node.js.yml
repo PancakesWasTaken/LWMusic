@@ -29,7 +29,7 @@ jobs:
     - name: Create artifacts folder
       run: mkdir artifacts
     - name: Copy output to artifacts
-      run: cp out/lwmusic-darwin-x64 artifacts/
+      run: cp out/lwmusic-linux-x64 artifacts/
     - uses: actions/upload-artifact@v2
       with:
         name: ${{ github.job }}
