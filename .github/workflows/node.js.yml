@@ -28,10 +28,10 @@ jobs:
     - run: npm run make
     - name: Create artifacts folder
       run: mkdir artifacts
-    - name: temp listing
-      run: ls
-    - name: list Output
-      run: ls out/make/
+    - name: Copy Output (1/2)
+      run: cp out/make/deb/linux/x64/lwmusic-linux-x64-1.0.0.deb artifacts/
+    - name: Copy Output (2/2)
+      run: cp out/make/rpm/linux/x64/lwmusic-linux-x64-1.0.0.rpm artifacts/
     - uses: actions/upload-artifact@v2
       with:
         name: ${{ github.job }}
