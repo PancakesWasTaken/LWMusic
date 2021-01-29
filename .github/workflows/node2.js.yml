@@ -28,7 +28,7 @@ jobs:
       - name: Create artifacts folder
         run: mkdir artifacts
       - name: Copy output to artifacts
-        run: cp out/make/zip/darwin/x64/lwmusic-darwin-x64-1.0.0.zip
+        run: cp out/make/zip/darwin/x64/lwmusic-darwin-x64-1.0.0.zip artifacts/
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ github.job }}
