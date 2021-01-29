@@ -29,9 +29,9 @@ jobs:
     - name: Create artifacts folder
       run: mkdir artifacts && ls out/make/deb/x64 && ls out/make/rpm/x64
     - name: Copy Output (1/2)
-      run: cp out/make/deb/x64/lwmusic-linux-x64-1.0.0.deb artifacts/
+      run: cp out/make/deb/x64/lwmusic_1.0.0_amd64.deb artifacts/
     - name: Copy Output (2/2)
-      run: cp out/make/rpm/x64/lwmusic-linux-x64-1.0.0.rpm artifacts/
+      run: cp out/make/rpm/x64/lwmusic-1.0.0-1.x86_64.rpm artifacts/
     - uses: actions/upload-artifact@v2
       with:
         name: ${{ github.job }}
