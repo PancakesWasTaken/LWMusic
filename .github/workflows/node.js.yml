@@ -28,11 +28,15 @@ jobs:
     - run: npm run make
     - name: Create artifacts folder
       run: mkdir artifacts
-    - name: Copy output to artifacts
+    - name: Copy output to artifacts (1/5)
       run: cp out/lwmusic-linux-x64/lwmusic.deb artifacts/
+    - name: Copy output to artifacts (2/5)
       run: cp out/lwmusic-linux-x64/lwmusic.rpm artifacts/
+    - name: Copy output to artifacts (3/5)
       run: cp out/lwmusic-linux-x64/LICENSE artifacts/
+    - name: Copy output to artifacts (4/5)
       run: cp out/lwmusic-linux-x64/LICENSES.chromium.html artifacts/
+    - name: Copy output to artifacts (5/5)
       run: cp out/lwmusic-linux-x64/version artifacts/
     - uses: actions/upload-artifact@v2
       with:
