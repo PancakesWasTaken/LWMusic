@@ -24,8 +24,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm ci
-      - run: npm run maket
+      - run: npm run make
+      - name: Create artifacts folder
+        run: mkdir artifacts
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ github.job }}
-          path: bin/*
+          path: artifacts/
