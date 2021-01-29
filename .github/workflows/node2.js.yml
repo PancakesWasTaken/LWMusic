@@ -27,14 +27,8 @@ jobs:
       - run: npm run make
       - name: Create artifacts folder
         run: mkdir artifacts
-      - name: Copy output to artifacts (1/4)
-        run: cp out/lwmusic-darwin-x64/lwmusic.app artifacts/
-      - name: Copy output to artifacts (2/4)
-        run: cp out/lwmusic-darwin-x64/LICENSE artifacts/
-      - name: Copy output to artifacts (3/4)
-        run: cp out/lwmusic-darwin-x64/LICENSES.chromium.html artifacts/
-      - name: Copy output to artifacts (4/4)
-        run: cp out/lwmusic-darwin-x64/version artifacts/
+      - name: Copy output to artifacts
+        run: cp out/make/zip/darwin/x64/lwmusic-darwin-x64-1.0.0.zip
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ github.job }}
